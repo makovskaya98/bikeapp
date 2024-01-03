@@ -167,6 +167,7 @@ class ProductsTable extends Component {
                 page={this.state.page}
                 onPageChange={this.handleChangePage}
                 onRowsPerPageChange={this.handleChangeRowsPerPage}
+                labelRowsPerPage="Строк на странице"
             />
         </div>
     }
