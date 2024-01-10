@@ -14,8 +14,4 @@ php artisan db:seed --class=UsersTableSeeder
 
 npm install
 
-<<<<<<< HEAD
 npm run dev
-=======
-npm run dev
->>>>>>> 92a34c7b2e1ab00b0e68ab21fe07a0ce73a6bde6
