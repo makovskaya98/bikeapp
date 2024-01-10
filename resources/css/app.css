@@ -75,6 +75,32 @@ i.bi.bi-phone {
     padding: 5px;
 }
 
+.delet-cart,
+.cart {
+    padding: 0 20px;
+}
+
+.delet-cart:hover,
+.cart:hover {
+    cursor: pointer;
+}
+
+i.bi.bi-x-lg {
+    color: red;
+    font-size: 24px;
+}
+
+i.bi.bi-cart2 {
+    font-size: 25px;
+    color: #ff9900;
+}
+
+i.bi.bi-arrow-right-circle-fill {
+    font-size: 24px;
+    color: #00d71e;
+    padding: 0 20px;
+}
+
 .container {
     min-height: 100vh;
     height: 100%;
@@ -208,4 +234,16 @@ a.link-item {
 .group-buttons {
     display: flex;
     justify-content: space-between;
+}
+
+.header-assistant {
+    color: #0c223a;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+span.clock {
+    font-size: 20px;
+    font-weight: bold;
+    color: #145ca4;
 }

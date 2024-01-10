@@ -15,9 +15,3 @@ php artisan db:seed --class=UsersTableSeeder
 npm install
 
 npm run dev
-
-DEFAULT LOGIN
-
-admin
-
-Admin123

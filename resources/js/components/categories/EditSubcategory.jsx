@@ -87,12 +87,18 @@ class EditSubcategory extends Component {
 
     async componentDidUpdate() {
         const response = await this.getSubСategories();
-
         this.setState({rows: response});
     }
 
     handleChange(event) {
         this.setState({ [event.target.name]: event.target.value });
+    }
+
+    delSubcategory = (id) => {
+        const index = this.state.rows.findIndex((object) => object.id == id);
+
+        this.state.rows.splice(index, 1);
+        this.setState({rows: this.state.rows});
     }
 
 
@@ -164,7 +170,7 @@ class EditSubcategory extends Component {
                                             </TableCell>
                                             <TableCell align="left">{row.title}</TableCell>
                                             <TableCell width="10%" align="left">
-                                                <DeleteSubCategoryPopup subcategoryId = {row.id} subcategoryTitle = {row.title}></DeleteSubCategoryPopup>
+                                                <DeleteSubCategoryPopup subcategoryId = {row.id} subcategoryTitle = {row.title} delSubcategory = {this.delSubcategory}></DeleteSubCategoryPopup>
                                             </TableCell>
                                         </TableRow>
                                     ))}
@@ -195,7 +201,7 @@ class DeleteSubCategoryPopup extends React.Component {
         let self = this;
         axios.post("/public/categories/deletesubcategory", {'id': id})
             .then(function (response) {
-                self.setState({isDelete: true});
+                self.props.delSubcategory(id);
             })
             .catch(function (error) {
                 console.log(error);
